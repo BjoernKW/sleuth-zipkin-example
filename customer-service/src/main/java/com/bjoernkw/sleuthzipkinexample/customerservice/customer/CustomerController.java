@@ -22,7 +22,7 @@ public class CustomerController {
     }
 
     @GetMapping("/{customerID}")
-    public Customer getCustomer(@PathVariable String customerID) {
+    public CustomerDTO getCustomer(@PathVariable String customerID) {
         LOGGER.info("HTTP request for customer: {}", customerID);
 
         return customerService.getCustomer(customerID);

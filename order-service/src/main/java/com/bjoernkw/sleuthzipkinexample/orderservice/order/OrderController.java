@@ -21,7 +21,7 @@ public class OrderController {
     }
 
     @PostMapping
-    public Order placeOrder() {
+    public OrderDTO placeOrder() {
         LOGGER.info("HTTP request for placing a new order");
 
         return orderService.placeOrder("1", "1");

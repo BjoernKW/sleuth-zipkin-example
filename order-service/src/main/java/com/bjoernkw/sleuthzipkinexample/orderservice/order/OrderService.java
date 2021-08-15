@@ -24,13 +24,13 @@ public class OrderService {
         this.restTemplate = restTemplate;
     }
 
-    public Order placeOrder(String orderID, String customerID) {
+    public OrderDTO placeOrder(String orderID, String customerID) {
         LOGGER.info("Placing order {} for customer {} ", orderID, customerID);
 
         ResponseEntity<CustomerDTO> customerDTOResponseEntity
                 = restTemplate.getForEntity(customerServiceURL + "/" + customerID, CustomerDTO.class);
 
-        return new Order(
+        return new OrderDTO(
                 orderID,
                 Objects.requireNonNull(customerDTOResponseEntity.getBody()).getCustomerID()
         );

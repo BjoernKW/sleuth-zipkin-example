@@ -9,9 +9,9 @@ public class CustomerService {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(CustomerService.class);
 
-    public Customer getCustomer(String customerID) {
+    public CustomerDTO getCustomer(String customerID) {
         LOGGER.info("Getting customer: {}", customerID);
 
-        return new Customer(customerID);
+        return new CustomerDTO(customerID);
     }
 }

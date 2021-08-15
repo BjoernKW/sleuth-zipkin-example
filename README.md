@@ -22,9 +22,9 @@ Once the container is up and running, the Zipkin server will be available under 
 6. Open yet another terminal and execute this cURL command: ```curl -X POST http://localhost:8080/```. 
 This will yield this response: ```{"orderID":"1","customerID":"1"}```
 
-Now you should be able to search for distributed log traces under http://localhost:9411/zipkin
+Now you should be able to search for distributed log traces under http://localhost:9411/zipkin.
 
-This log traces will include Spring Cloud Sleuth trace IDs (for identifying an entire process) and span IDs (for identifying single steps in that process).
+These log traces will include Spring Cloud Sleuth trace IDs (for identifying an entire process) and span IDs (for identifying single steps in that process).
 
 ## Running the build
 

@@ -17,7 +17,7 @@ This will pull the [official Zipkin Docker image](https://registry.hub.docker.co
 Once the container is up and running, the Zipkin server will be available under http://localhost:9411/zipkin
 2. Open another new terminal and ```cd order-service```.
 3. Run ```mvn spring-boot:run``` from the command line. This will start the order service under this URL: http://localhost:8080/
-4. Open a new terminaml and ```cd customer-service```.
+4. Open a new terminal and ```cd customer-service```.
 5. Run ```mvn spring-boot:run``` from the command line. This will start the customer service under this URL: http://localhost:8081/
 6. Open yet another terminal and execute this cURL command: ```curl -X POST http://localhost:8080/```. 
 This will yield this response: ```{"orderID":"1","customerID":"1"}```
